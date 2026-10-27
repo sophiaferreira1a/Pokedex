@@ -1,0 +1,14 @@
+.app { min-height: 100vh; display: flex; flex-direction: column; }
+.app__main { width: 100%; max-width: 1200px; margin: 0 auto; padding: 24px 16px; flex: 1; }
+.app__count { color: var(--muted); margin: 8px 0 16px; font-size: 0.9rem; }
+.app__footer { text-align: center; color: var(--muted); font-size: 0.8rem; padding: 20px; }
+
+.btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: all 0.2s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.btn.is-active { background: var(--primary); border-color: var(--primary); color: #fff; }

@@ -1,0 +1,38 @@
+.modal {
+  position: fixed; inset: 0; z-index: 50; padding: 16px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px);
+  animation: fade 0.2s ease-out;
+}
+.modal__box {
+  --type-color: #9ca3af;
+  position: relative; width: 100%; max-width: 560px; max-height: 92vh; overflow-y: auto;
+  background: var(--surface); border-radius: 22px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: pop 0.25s ease-out;
+}
+.modal__close {
+  position: absolute; top: 12px; right: 12px; z-index: 2;
+  background: rgba(0, 0, 0, 0.35); color: #fff; border: none;
+  width: 34px; height: 34px; border-radius: 50%;
+}
+.modal__hero {
+  position: relative; display: flex; justify-content: center; padding: 28px 16px 12px;
+  background: linear-gradient(160deg, var(--type-color), color-mix(in srgb, var(--type-color) 40%, #000));
+  border-radius: 22px 22px 0 0;
+}
+.modal__id { position: absolute; top: 14px; left: 18px; color: #fff; font-weight: 800; font-size: 1.2rem; opacity: 0.9; }
+.modal__img { width: 210px; height: 210px; object-fit: contain; filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.4)); animation: float 3s ease-in-out infinite; }
+.modal__body { padding: 20px 24px 26px; }
+.modal__title { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.modal__title h2 { font-size: 1.8rem; }
+.modal__fav { background: var(--bg); border: 1px solid var(--border); padding: 6px 12px; border-radius: 999px; }
+.modal__fav.is-fav { color: #f59e0b; border-color: #f59e0b; }
+.modal__types { display: flex; gap: 8px; margin: 10px 0 18px; }
+.modal__total { text-align: right; color: var(--muted); margin-top: 6px; }
+.modal__owners { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); }
+.modal__owners h4 { margin-bottom: 4px; }
+.modal__owners p { color: var(--muted); }
+
+@keyframes fade { from { opacity: 0; } }
+@keyframes pop { from { transform: scale(0.9); opacity: 0; } }
+@keyframes float { 50% { transform: translateY(-8px); } }

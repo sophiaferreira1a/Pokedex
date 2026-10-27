@@ -1,0 +1,19 @@
+.trainers { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); align-items: start; }
+.trainer { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; border-left: 6px solid var(--primary); }
+.trainer__head {
+  width: 100%; background: none; border: none; text-align: left; padding: 16px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.trainer__head h3 { font-size: 1.15rem; }
+.trainer__head p { color: var(--muted); font-size: 0.88rem; margin-top: 2px; }
+.trainer__count { background: var(--bg); padding: 4px 12px; border-radius: 999px; font-size: 0.85rem; }
+.trainer__team { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 8px; padding: 0 16px 16px; animation: fade 0.2s; }
+.trainer__team button {
+  width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 12px;
+  padding: 8px 4px; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 0.78rem;
+  transition: transform 0.2s;
+}
+.trainer__team button:hover { transform: translateY(-3px); }
+.trainer__img { width: 64px; height: 64px; object-fit: contain; }
+.trainer__none { color: var(--muted); grid-column: 1 / -1; }
+@keyframes fade { from { opacity: 0; } }

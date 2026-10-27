@@ -1,0 +1,16 @@
+.filters { margin-top: 18px; display: flex; flex-direction: column; gap: 14px; }
+.filters__types { display: flex; flex-wrap: wrap; gap: 8px; }
+.type-chip {
+  --chip-color: #4b5563;
+  background: var(--surface); border: 2px solid var(--chip-color);
+  color: var(--text); padding: 5px 14px; border-radius: 999px; font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.type-chip:hover { transform: translateY(-2px); }
+.type-chip.is-active { background: var(--chip-color); color: #fff; }
+.filters__row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.filters__sort { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; }
+.filters__sort select {
+  background: var(--surface); color: var(--text); border: 1px solid var(--border);
+  padding: 8px 10px; border-radius: 10px;
+}

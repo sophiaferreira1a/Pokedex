@@ -1,0 +1,6 @@
+.stat { display: grid; grid-template-columns: 150px 40px 1fr; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 0.88rem; }
+.stat__value { font-weight: 700; text-align: right; }
+.stat__track { height: 10px; background: var(--border); border-radius: 999px; overflow: hidden; }
+.stat__fill { height: 100%; border-radius: 999px; animation: grow 0.7s ease-out; }
+@keyframes grow { from { width: 0 !important; } }
+@media (max-width: 480px) { .stat { grid-template-columns: 110px 32px 1fr; font-size: 0.8rem; } }
